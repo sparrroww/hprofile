@@ -36,7 +36,7 @@ jobs:
           SONAR_ORGANIZATION: ${{ secrets.SONAR_ORGANIZATION }}
           SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}
         run: |
-          sonar-scanner \
+          sonar-scanner -X \
             -Dsonar.host.url=$SONAR_URL \
             -Dsonar.login=$SONAR_TOKEN \
             -Dsonar.organization=$SONAR_ORGANIZATION \
